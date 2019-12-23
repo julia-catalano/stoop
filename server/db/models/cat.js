@@ -13,6 +13,9 @@ const Cat = db.define('cat', {
   },
   imageUrl: {
     type: Sequelize.STRING
+  },
+  time: {
+    type: Sequelize.STRING
   }
 })
 
