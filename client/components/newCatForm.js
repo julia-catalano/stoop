@@ -7,6 +7,7 @@ class NewCatForm extends React.Component {
     super()
     this.state = {
       name: '',
+      time: '',
       latitude: '',
       longitude: '',
       imageUrl: ''

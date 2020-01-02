@@ -5,6 +5,9 @@ const Cat = db.define('cat', {
   name: {
     type: Sequelize.STRING
   },
+  time: {
+    type: Sequelize.STRING
+  },
   latitude: {
     type: Sequelize.INTEGER
   },
@@ -12,9 +15,6 @@ const Cat = db.define('cat', {
     type: Sequelize.INTEGER
   },
   imageUrl: {
-    type: Sequelize.STRING
-  },
-  time: {
     type: Sequelize.STRING
   }
 })
