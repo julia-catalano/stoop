@@ -2,6 +2,15 @@ const router = require('express').Router()
 const Cat = require('../db/models/cat')
 module.exports = router
 
+router.get('/', async (req, res, next) => {
+  try {
+    const cats = await Cat.findAll()
+    res.json(cats)
+  } catch (err) {
+    next(err)
+  }
+})
+
 router.post('/', async (req, res, next) => {
   try {
     const cat = await Cat.create({

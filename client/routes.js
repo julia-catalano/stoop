@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import {Login, Signup, UserHome} from './components'
 import LandingPage from './components/landingPage'
 import NewCatForm from './components/newCatForm'
+import CatMap from './components/catMap'
 import {me} from './store'
 
 /**
@@ -25,10 +26,11 @@ class Routes extends Component {
         <Route exact path="/add" component={NewCatForm} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        <Route exact path="/catmap" component={CatMap} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
-            <Route path="/home" component={UserHome} />
+            <Route exact path="/home" component={UserHome} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
