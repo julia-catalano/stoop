@@ -15,6 +15,7 @@ class CatMap extends React.Component {
     return (
       <div>
         <h1>local spots</h1>
+        <div>{this.props.cats.map(cat => <h2>{cat.name}</h2>)}</div>
       </div>
     )
   }
