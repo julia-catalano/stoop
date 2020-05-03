@@ -1,7 +1,7 @@
 'use strict'
 
 const db = require('../server/db')
-const {User} = require('../server/db/models')
+const {User, Cat} = require('../server/db/models')
 
 async function seed() {
   await db.sync({force: true})
@@ -14,6 +14,36 @@ async function seed() {
 
   console.log(`seeded ${users.length} users`)
   console.log(`seeded successfully`)
+  const cats = await Promise.all([
+    Cat.create({
+      name: 'Indy',
+      time: '1:09PM',
+      latitude: 40.6600605,
+      longitude: -73.9609829,
+      imageUrl: 'http://aws.random.cat/meow'
+    }),
+    Cat.create({
+      name: 'BK Zinc Cat',
+      time: '2:09PM',
+      latitude: 40.6780161,
+      longitude: -73.9670804,
+      imageUrl: 'http://aws.random.cat/meow'
+    }),
+    Cat.create({
+      name: 'bodegacat',
+      time: '3:09PM',
+      latitude: 40.6600615,
+      longitude: -73.9554536,
+      imageUrl: 'http://aws.random.cat/meow'
+    }),
+    Cat.create({
+      name: 'meowby',
+      time: '4:09PM',
+      latitude: 40.6600605,
+      longitude: -73.9620895,
+      imageUrl: 'http://aws.random.cat/meow'
+    })
+  ])
 }
 
 // We've separated the `seed` function from the `runSeed` function.

@@ -9,10 +9,10 @@ const Cat = db.define('cat', {
     type: Sequelize.STRING
   },
   latitude: {
-    type: Sequelize.INTEGER
+    type: Sequelize.DECIMAL
   },
   longitude: {
-    type: Sequelize.INTEGER
+    type: Sequelize.DECIMAL
   },
   imageUrl: {
     type: Sequelize.STRING
