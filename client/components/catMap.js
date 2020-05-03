@@ -46,5 +46,5 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(
-  GoogleApiWrapper({apiKey: 'AIzaSyA1LJsAQck-ITerB6JBStl9lLhxa5frpck'})(CatMap)
+  GoogleApiWrapper({apiKey: process.env.GOOGLE_API_KEY})(CatMap)
 )
