@@ -1,7 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {getAllCatsThunk} from '../store/cat'
-import {GoogleApiWrapper, InfoWindow, Map, Marker} from 'google-maps-react'
+import {shiftViewport} from '../store/map'
+import ReactMapGL from 'react-map-gl'
+import token from '../../secrets.js'
 
 class CatMap extends React.Component {
   constructor(props) {
@@ -13,23 +15,16 @@ class CatMap extends React.Component {
   }
 
   render() {
-    const style = {
-      width: '300px',
-      height: '300px'
-    }
     return (
       <div>
         <h1>local spots</h1>
         <div>{this.props.cats.map(cat => <h2>{cat.name}</h2>)}</div>
         <div className="map">
-          <Map
-            google={this.props.google}
-            zoom={10}
-            initialCenter={{
-              lat: 40.6600615,
-              lng: -73.9532596
-            }}
-            style={style}
+          <ReactMapGL
+            {...this.props.viewport}
+            onViewportChange={viewport => this.props.shiftViewport(viewport)}
+            mapStyle="mapbox://styles/mapbox/streets-v11"
+            mapboxApiAccessToken={token}
           />
         </div>
       </div>
@@ -38,13 +33,13 @@ class CatMap extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  cats: state.cat.cats
+  cats: state.cat.cats,
+  viewport: state.map.viewport
 })
 
 const mapDispatchToProps = dispatch => ({
-  getAllCats: () => dispatch(getAllCatsThunk())
+  getAllCats: () => dispatch(getAllCatsThunk()),
+  shiftViewport: newViewport => dispatch(shiftViewport(newViewport))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  GoogleApiWrapper({apiKey: process.env.GOOGLE_API_KEY})(CatMap)
-)
+export default connect(mapStateToProps, mapDispatchToProps)(CatMap)
