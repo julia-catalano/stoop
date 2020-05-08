@@ -4,10 +4,12 @@ import thunkMiddleware from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import user from './user'
 import cat from './cat'
+import map from './map'
 
 const reducer = combineReducers({
   user: user,
-  cat: cat
+  cat: cat,
+  map: map
 })
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
@@ -17,3 +19,4 @@ const store = createStore(reducer, middleware)
 export default store
 export * from './user'
 export * from './cat'
+export * from './map'
