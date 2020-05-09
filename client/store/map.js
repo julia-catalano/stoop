@@ -20,7 +20,12 @@ export const shiftViewport = viewport => ({type: SHIFT_VIEW, viewport})
 export default function mapReducer(mapState = initialMapState, action) {
   switch (action.type) {
     case SHIFT_VIEW:
-      return {...mapState, viewport: action.viewport}
+      return {
+        ...mapState,
+        latitude: action.viewport.latitude,
+        longitude: action.viewport.longitude,
+        zoom: action.viewport.zoom
+      }
     default:
       return mapState
   }
