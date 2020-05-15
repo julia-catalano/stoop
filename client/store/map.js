@@ -4,8 +4,8 @@ const SHIFT_VIEW = 'SHIFT_VIEW'
 //INITIAL STATE
 const initialMapState = {
   viewport: {
-    width: '50vw',
-    height: '50vh',
+    width: '100vw',
+    height: '100vh',
     latitude: 40.6600615,
     longitude: -73.9532596,
     zoom: 16
