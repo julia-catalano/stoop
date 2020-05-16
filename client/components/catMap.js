@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {getAllCatsThunk} from '../store/cat'
 import {shiftViewport} from '../store/map'
-import MapGL from 'react-map-gl'
+import ReactMapGL from 'react-map-gl'
 import token from '../../secrets.js'
 
 class CatMap extends React.Component {
@@ -20,7 +20,7 @@ class CatMap extends React.Component {
         <h1>local spots</h1>
         <div>{this.props.cats.map(cat => <h2>{cat.name}</h2>)}</div>
         <div className="map">
-          <MapGL
+          <ReactMapGL
             {...this.props.viewport}
             onViewportChange={viewport => this.props.shiftViewport(viewport)}
             mapStyle="mapbox://styles/mapbox/streets-v11"
