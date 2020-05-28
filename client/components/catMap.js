@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {getAllCatsThunk} from '../store/cat'
 import {shiftViewport} from '../store/map'
-import ReactMapGL from 'react-map-gl'
+import ReactMapGL, {GeolocateControl, NavigationControl} from 'react-map-gl'
 import token from '../../secrets.js'
 
 class CatMap extends React.Component {
@@ -25,7 +25,15 @@ class CatMap extends React.Component {
             onViewportChange={viewport => this.props.shiftViewport(viewport)}
             mapStyle="mapbox://styles/mapbox/streets-v11"
             mapboxApiAccessToken={token}
-          />
+          >
+            <GeolocateControl
+              positionOptions={{enableHighAccuracy: true}}
+              trackUserLocation={true}
+            />
+            <div style={{position: 'absolute', right: 0}}>
+              <NavigationControl />
+            </div>
+          </ReactMapGL>
         </div>
       </div>
     )
@@ -34,7 +42,7 @@ class CatMap extends React.Component {
 
 const mapStateToProps = state => ({
   cats: state.cat.cats,
-  viewport: state.map.viewport
+  viewport: state.map
 })
 
 const mapDispatchToProps = dispatch => ({
