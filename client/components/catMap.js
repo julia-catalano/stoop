@@ -4,6 +4,7 @@ import {getAllCatsThunk} from '../store/cat'
 import {shiftViewport} from '../store/map'
 import ReactMapGL, {GeolocateControl, NavigationControl} from 'react-map-gl'
 import token from '../../secrets.js'
+import Markers from './markers'
 
 class CatMap extends React.Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class CatMap extends React.Component {
             <div style={{position: 'absolute', right: 0}}>
               <NavigationControl />
             </div>
+            <Markers data={this.props.cats} />
           </ReactMapGL>
         </div>
       </div>

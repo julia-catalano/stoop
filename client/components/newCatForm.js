@@ -8,8 +8,8 @@ class NewCatForm extends React.Component {
     this.state = {
       name: '',
       time: '',
-      latitude: '',
-      longitude: '',
+      latitude: null,
+      longitude: null,
       imageUrl: ''
     }
     this.handleChange = this.handleChange.bind(this)
