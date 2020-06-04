@@ -5,6 +5,7 @@ module.exports = router
 router.get('/', async (req, res, next) => {
   try {
     const cats = await Cat.findAll()
+    console.log('this is the cats', cats)
     res.json(cats)
   } catch (err) {
     next(err)

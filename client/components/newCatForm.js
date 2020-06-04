@@ -26,11 +26,12 @@ class NewCatForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault()
     this.props.addCat(this.state)
+    console.log('hello kitty', this.state)
     this.setState({
       name: '',
       time: '',
-      latitude: '',
-      longitude: '',
+      latitude: null,
+      longitude: null,
       imageUrl: ''
     })
   }
