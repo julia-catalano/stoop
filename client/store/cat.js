@@ -21,7 +21,6 @@ export const selectACat = cat => ({type: SELECT_A_CAT, cat})
 //THUNK CREATORS
 
 export const addCatThunk = cat => async dispatch => {
-  console.log('this is the cat', cat)
   try {
     const {data} = await axios.post('/api/cats', cat)
     dispatch(addCat(data))
