@@ -34,7 +34,7 @@ class CatMap extends React.Component {
             <div style={{position: 'absolute', right: 0}}>
               <NavigationControl />
             </div>
-            <Markers data={this.props.cats} />
+            <Markers />
           </ReactMapGL>
         </div>
       </div>

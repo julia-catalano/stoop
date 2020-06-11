@@ -3,6 +3,7 @@ import axios from 'axios'
 //ACTION TYPES
 const ADD_CAT = 'ADD_CAT'
 const GET_ALL_CATS = 'GET_ALL_CATS'
+const SELECT_A_CAT = 'SELECT_A_CAT'
 
 //INITIAL STATE
 const initialCatState = {
@@ -14,6 +15,8 @@ const initialCatState = {
 const addCat = cat => ({type: ADD_CAT, cat})
 
 const getAllCats = cats => ({type: GET_ALL_CATS, cats})
+
+export const selectACat = cat => ({type: SELECT_A_CAT, cat})
 
 //THUNK CREATORS
 
@@ -43,6 +46,8 @@ export default function catReducer(catState = initialCatState, action) {
       return {...catState, cats: [...catState.cats, action.cat]}
     case GET_ALL_CATS:
       return {...catState, cats: action.cats}
+    case SELECT_A_CAT:
+      return {...catState, selectedCat: action.cat}
     default:
       return catState
   }
