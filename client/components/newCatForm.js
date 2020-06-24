@@ -14,6 +14,7 @@ class NewCatForm extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.locateMe = this.locateMe.bind(this)
   }
 
   handleChange(event) {
@@ -34,6 +35,21 @@ class NewCatForm extends React.Component {
       longitude: null,
       imageUrl: ''
     })
+  }
+
+  locateMe() {
+    event.preventDefault()
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        this.setState({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude
+        })
+      },
+      err => {
+        console.log(err)
+      }
+    )
   }
 
   render() {
@@ -65,6 +81,9 @@ class NewCatForm extends React.Component {
             onChange={this.handleChange}
             value={this.state.longitude}
           />
+          <button type="button" onClick={this.locateMe}>
+            Use My Spot!
+          </button>
           Pic (or it didn't happen!):{' '}
           <input
             name="imageUrl"
