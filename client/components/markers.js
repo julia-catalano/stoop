@@ -18,7 +18,13 @@ class Markers extends PureComponent {
             longitude={parseFloat(cat.longitude)}
             latitude={parseFloat(cat.latitude)}
           >
-            <img onClick={() => this.props.selectACat(cat)} src={catjpg} />
+            <img
+              onClick={() => this.props.selectACat(cat)}
+              src={catjpg}
+              alt="cat map marker"
+              height="40px"
+              width="40px"
+            />
           </Marker>
         ))}
         {this.props.catState.showPopUp && (
