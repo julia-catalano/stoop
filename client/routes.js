@@ -23,14 +23,14 @@ class Routes extends Component {
       <Switch>
         {/* Routes placed here are available to all visitors */}
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/add" component={NewCatForm} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        <Route exact path="/catmap" component={CatMap} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
             <Route exact path="/home" component={UserHome} />
+            <Route exact path="/catmap" component={CatMap} />
+            <Route exact path="/add" component={NewCatForm} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}

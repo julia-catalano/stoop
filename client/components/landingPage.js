@@ -19,7 +19,7 @@ export class LandingPage extends React.Component {
 
   render() {
     if (this.props.user.id) {
-      return <Redirect to="/home" />
+      return <Redirect to="/catmap" />
     }
 
     return (
