@@ -46,7 +46,7 @@ export const getAllCatsThunk = () => async dispatch => {
 export default function catReducer(catState = initialCatState, action) {
   switch (action.type) {
     case ADD_CAT:
-      return {...catState, cats: [...catState.cats, action.cat]}
+      return {...catState}
     case GET_ALL_CATS:
       return {...catState, cats: action.cats}
     case SELECT_A_CAT:
