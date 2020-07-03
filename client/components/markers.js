@@ -35,7 +35,7 @@ class Markers extends PureComponent {
             onClose={() => this.props.toggleCat()}
           >
             {this.props.catState.selectedCat.name}
-            <img height="100px" width="100px" src="../images/indy.jpg" />
+            <img height="100px" width="100px" src="../images/smallcat.jpg" />
             {this.props.catState.selectedCat.time}
           </Popup>
         )}
