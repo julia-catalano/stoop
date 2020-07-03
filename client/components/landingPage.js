@@ -26,6 +26,7 @@ export class LandingPage extends React.Component {
       <div className="home-container">
         <div className="heading">
           <h4>Stoop</h4>
+          <h6>a social app for spotting brooklyn stoop cats</h6>
         </div>
 
         <div className="button-container">
