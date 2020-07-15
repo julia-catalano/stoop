@@ -52,6 +52,26 @@ class NewCatForm extends React.Component {
     )
   }
 
+  openWidget = () => {
+    window.cloudinary
+      .createUploadWidget(
+        {
+          cloudName: 'stoopcats',
+          uploadPreset: 'pejycidk'
+        },
+        (error, result) => {
+          if (result.event === 'success') {
+            this.setState({
+              imageUrl: result.info.secure_url
+            })
+          } else {
+            console.error(error)
+          }
+        }
+      )
+      .open()
+  }
+
   render() {
     return (
       <div className="newCatForm">
@@ -84,12 +104,9 @@ class NewCatForm extends React.Component {
           <button type="button" onClick={this.locateMe}>
             Use My Spot!
           </button>
-          Pic (or it didn't happen!):{' '}
-          <input
-            name="imageUrl"
-            onChange={this.handleChange}
-            value={this.state.imageUrl}
-          />
+          <button type="button" onClick={this.openWidget}>
+            Pic (or it didn't happen!):{' '}
+          </button>
           <button type="submit">Spot!</button>
         </form>
       </div>
