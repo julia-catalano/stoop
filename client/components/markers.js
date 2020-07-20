@@ -3,6 +3,7 @@ import {PureComponent} from 'react'
 import {connect} from 'react-redux'
 import {Marker, Popup} from 'react-map-gl'
 import catjpg from '../images/cat.jpg'
+import catpng from '../images/pet.png'
 import {selectACat, toggleCat} from '../store/cat'
 let lat
 let long
@@ -20,7 +21,7 @@ class Markers extends PureComponent {
           >
             <img
               onClick={() => this.props.selectACat(cat)}
-              src={catjpg}
+              src={catpng}
               alt="cat map marker"
               height="40px"
               width="40px"
