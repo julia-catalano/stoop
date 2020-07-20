@@ -57,7 +57,8 @@ class NewCatForm extends React.Component {
       .createUploadWidget(
         {
           cloudName: 'stoopcats',
-          uploadPreset: 'pejycidk'
+          uploadPreset: 'pejycidk',
+          sources: ['local', 'camera', 'instagram']
         },
         (error, result) => {
           if (result.event === 'success') {
