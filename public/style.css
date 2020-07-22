@@ -160,10 +160,11 @@ form div {
   flex-direction: column;
   align-items: center;
   width: 40vw;
+  background-color: #e2dde1;
 }
 
 .newCatForm .container .heading h4 {
-  color: #4b8eb2;
+  color: #f4705a;
   font-size: 35px;
   text-align: center;
   margin-left: 15px;
@@ -240,7 +241,7 @@ form div {
   color: #ffffff;
   font-size: 16px;
   padding: 15px;
-  background-color: #4b8eb2;
+  background-color: #80987f;
   border: none;
   border-radius: 10px;
   width: 20vw;
@@ -253,7 +254,7 @@ form div {
   color: #ffffff;
   font-size: 16px;
   padding: 15px;
-  background-color: #4b8eb2;
+  background-color: #80987f;
   border: none;
   border-radius: 10px;
   width: 20vw;
@@ -266,33 +267,29 @@ form div {
 }
 
 .newCatForm .container .form-fields .submitButton-container {
-  width: 100%;
   display: flex;
   border: 1px solid transparent;
   justify-content: center;
-  margin-top: 18px;
-  margin-bottom: 23px;
-  /* margin-right: 13px;
-  margin-left: 13px; */
-  /* padding: 15px; */
+  justify-items: center;
 }
 
 .newCatForm .container .form-fields .submitButton-container button {
   color: #ffffff;
   font-size: 16px;
   padding: 15px;
-  background-color: #e54567;
+  background-color: #80987f;
   border: none;
   border-radius: 10px;
-  /* margin-right: 0px; */
-  width: 50%;
+  width: 20vw;
 }
 
 .newCatForm .container .form-fields .submitButton-container a {
   display: flex;
-  width: 100%;
+  justify-self: center;
+  padding: 15px;
   justify-content: center;
   text-decoration: none;
+  width: 20vw;
 }
 
 .newCatForm .container .form-fields .submitButton-container button:hover {

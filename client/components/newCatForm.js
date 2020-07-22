@@ -126,9 +126,9 @@ class NewCatForm extends React.Component {
                   pic (or it didn't happen!){' '}
                 </button>
               </div>
-            </div>
-            <div className="submitButton-container">
-              <button type="submit">Spot!</button>
+              <div className="submitButton-container">
+                <button type="submit">Spot!</button>
+              </div>
             </div>
           </div>
         </form>
