@@ -76,39 +76,61 @@ class NewCatForm extends React.Component {
   render() {
     return (
       <div className="newCatForm">
-        <h4> Spotted! </h4>
         <form onSubmit={this.handleSubmit}>
-          Name:{' '}
-          <input
-            name="name"
-            onChange={this.handleChange}
-            value={this.state.name}
-          />
-          When:{' '}
-          <input
-            name="time"
-            onChange={this.handleChange}
-            value={this.state.time}
-          />
-          Where - latitude:{' '}
-          <input
-            name="latitude"
-            onChange={this.handleChange}
-            value={this.state.latitude}
-          />
-          Where - longitude:{' '}
-          <input
-            name="longitude"
-            onChange={this.handleChange}
-            value={this.state.longitude}
-          />
-          <button type="button" onClick={this.locateMe}>
-            Use My Spot!
-          </button>
-          <button type="button" onClick={this.openWidget}>
-            Pic (or it didn't happen!):{' '}
-          </button>
-          <button type="submit">Spot!</button>
+          <div className="container">
+            <h4> spotted! </h4>
+            <div className="form-fields">
+              <div className="input-box">
+                <p className="field-title">name your spot </p>
+                <input
+                  name="name"
+                  className="form-control"
+                  onChange={this.handleChange}
+                  value={this.state.name}
+                />
+              </div>
+              <div className="input-box">
+                <p className="field-title">when </p>
+                <input
+                  name="time"
+                  className="form-control"
+                  onChange={this.handleChange}
+                  value={this.state.time}
+                />
+              </div>
+              <div className="button-container">
+                <button type="button" onClick={this.locateMe}>
+                  use my location!
+                </button>
+              </div>
+              <div className="input-box">
+                <p className="field-title">where - latitude </p>
+                <input
+                  name="latitude"
+                  className="form-control"
+                  onChange={this.handleChange}
+                  value={this.state.latitude}
+                />
+              </div>
+              <div className="input-box">
+                <p className="field-title">where - longitude </p>
+                <input
+                  name="longitude"
+                  className="form-control"
+                  onChange={this.handleChange}
+                  value={this.state.longitude}
+                />
+              </div>
+              <div className="button-container">
+                <button type="button" onClick={this.openWidget}>
+                  pic (or it didn't happen!){' '}
+                </button>
+              </div>
+            </div>
+            <div className="submitButton-container">
+              <button type="submit">Spot!</button>
+            </div>
+          </div>
         </form>
       </div>
     )

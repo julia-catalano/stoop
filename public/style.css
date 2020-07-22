@@ -19,3 +19,282 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+.newCatForm {
+  /* background-size: cover; */
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.newCatForm .container {
+  /* min-width: 400px;
+  min-height: 450px; */
+  /* box-shadow: 0px 0px 10px #cccccc; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.newCatForm .container .img {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.newCatForm .container .heading h4 {
+  color: #4b8eb2;
+  font-size: 35px;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.newCatForm .container .form-fields {
+  flex-direction: column;
+  width: 100%;
+}
+
+.newCatForm .container .form-fields .input-box {
+  margin-bottom: 10px;
+  width: 96%;
+}
+..newCatForm .container .form-fields .field-titles {
+  /* position: relative; */
+  color: #1d1d1d;
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 2px;
+}
+
+.newCatForm .container .form-fields .form-control {
+  height: 38px;
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  border: 1px solid #cccccc;
+  font-size: 12px;
+}
+
+.newCatForm .container .form-fields .form-inputs {
+  height: 17px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #d6d5d5;
+}
+
+.newCatForm .container .form-fields .input-box {
+  margin: 8px 0;
+  padding-left: 12px;
+  font-size: 15px;
+}
+
+.newCatForm .container .form-fields .button-container {
+  display: flex;
+  border: 1px solid transparent;
+  justify-content: center;
+  justify-items: center;
+}
+
+.newCatForm .container .form-fields .button-container button {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 15px;
+  background-color: #4b8eb2;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.newCatForm .container .form-fields .button-container a {
+  width: 100%;
+}
+.newCatForm .container .form-fields .button-container button:hover {
+  background-color: #414855;
+}
+
+.newCatForm .container .form-fields .submitButton-container {
+  width: 100%;
+  display: flex;
+  border: 1px solid transparent;
+  justify-content: center;
+  margin-top: 18px;
+  margin-bottom: 23px;
+  /* margin-right: 13px;
+  margin-left: 13px; */
+  /* padding: 15px; */
+}
+
+.newCatForm .container .form-fields .submitButton-container button {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 15px;
+  background-color: #e54567;
+  border: none;
+  border-radius: 10px;
+  /* margin-right: 0px; */
+  width: 50%;
+}
+
+.newCatForm .container .form-fields .submitButton-container button:hover {
+  background-color: #414855;
+}
+
+/* PROFILE */
+.newCatForm {
+  /* background-size: cover; */
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+  align-items: center;
+}
+
+.newCatForm .container {
+  /* min-width: 400px;
+  min-height: 450px; */
+  /* box-shadow: 0px 0px 10px #cccccc; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+}
+
+.newCatForm .container .heading h4 {
+  color: #4b8eb2;
+  font-size: 35px;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.newCatForm .container .form-fields {
+  flex-direction: column;
+  width: 40%;
+}
+
+.newCatForm .container .form-fields .input-box {
+  margin-bottom: 10px;
+  width: 96%;
+}
+
+.newCatForm .container .form-fields .field-titles {
+  /* position: relative; */
+  color: #1d1d1d;
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 2px;
+}
+.newCatForm .container .form-fields .profile-titles {
+  /* position: relative; */
+  color: #757373;
+  font-size: 18px;
+  justify-self: center;
+  margin-bottom: 2px;
+}
+.newCatForm .container .form-fields .profile-titles span {
+  /* position: relative; */
+  font-weight: normal;
+  color: #4b8eb2;
+}
+
+.newCatForm .container .form-fields .form-control {
+  height: 38px;
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  border: 1px solid #cccccc;
+  font-size: 12px;
+}
+
+.newCatForm .container .form-fields .form-inputs {
+  height: 17px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #d6d5d5;
+}
+
+.newCatForm .container .form-fields .input-box {
+  margin: 8px 0;
+  padding-left: 12px;
+  font-size: 15px;
+}
+
+/* .login-form .container .form-fields .form-control ::placeholder {
+  color: #cccccc;
+} */
+
+.newCatForm .container .form-fields .button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  /* border: 1px solid transparent; */
+  /* margin-bottom: 20px; */
+}
+
+.newCatForm .container .form-fields .button-container button {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 15px;
+  background-color: #4b8eb2;
+  border: none;
+  border-radius: 10px;
+  width: 20vw;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
+.newCatForm .container .form-fields .button-container a {
+  justify-self: center;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 15px;
+  background-color: #4b8eb2;
+  border: none;
+  border-radius: 10px;
+  width: 20vw;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
+.newCatForm .container .form-fields .button-container button:hover {
+  background-color: #414855;
+}
+
+.newCatForm .container .form-fields .submitButton-container {
+  width: 100%;
+  display: flex;
+  border: 1px solid transparent;
+  justify-content: center;
+  margin-top: 18px;
+  margin-bottom: 23px;
+  /* margin-right: 13px;
+  margin-left: 13px; */
+  /* padding: 15px; */
+}
+
+.newCatForm .container .form-fields .submitButton-container button {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 15px;
+  background-color: #e54567;
+  border: none;
+  border-radius: 10px;
+  /* margin-right: 0px; */
+  width: 50%;
+}
+
+.newCatForm .container .form-fields .submitButton-container a {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.newCatForm .container .form-fields .submitButton-container button:hover {
+  background-color: #414855;
+}
