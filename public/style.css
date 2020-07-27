@@ -62,7 +62,7 @@ form div {
   margin-bottom: 10px;
   width: 96%;
 }
-..newCatForm .container .form-fields .field-titles {
+.newCatForm .container .form-fields .field-titles {
   /* position: relative; */
   color: #1d1d1d;
   font-size: 15px;

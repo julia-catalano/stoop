@@ -11,9 +11,10 @@ let long
 // Though the sequelize type is set to decimal, sequelize converts decimals to a string in response - parseFloat might mess with precision a bit but need to convert this returned string to a number
 class Markers extends PureComponent {
   render() {
+    const catState = this.props.catState
     return (
       <div>
-        {this.props.catState.cats.map(cat => (
+        {catState.cats.map(cat => (
           <Marker
             key={cat.id}
             longitude={parseFloat(cat.longitude)}
@@ -28,16 +29,16 @@ class Markers extends PureComponent {
             />
           </Marker>
         ))}
-        {this.props.catState.showPopUp && (
+        {catState.showPopUp && (
           <Popup
-            latitude={parseFloat(this.props.catState.selectedCat.latitude)}
-            longitude={parseFloat(this.props.catState.selectedCat.longitude)}
+            latitude={parseFloat(catState.selectedCat.latitude)}
+            longitude={parseFloat(catState.selectedCat.longitude)}
             closeButton={true}
             onClose={() => this.props.toggleCat()}
           >
-            {this.props.catState.selectedCat.name}
-            <img src={this.props.catState.selectedCat.imageUrl} />
-            {this.props.catState.selectedCat.time}
+            {catState.selectedCat.name}
+            <img src={catState.selectedCat.imageUrl} />
+            {catState.selectedCat.time}
           </Popup>
         )}
       </div>
