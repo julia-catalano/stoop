@@ -24,10 +24,12 @@ class NewCatForm extends React.Component {
     })
   }
 
-  handleSubmit(event) {
+  async handleSubmit(event) {
     event.preventDefault()
+    console.log('before', this.state)
+    await this.assignTime()
+    console.log('does this do something', this.state)
     this.props.addCat(this.state)
-    console.log('hello kitty', this.state)
     this.setState({
       name: '',
       time: '',
@@ -50,6 +52,18 @@ class NewCatForm extends React.Component {
         console.log(err)
       }
     )
+  }
+
+  assignTime() {
+    let today = new Date()
+    let date =
+      today.getMonth() + 1 + '/' + today.getDate() + '/' + today.getFullYear()
+    let time = today.getHours() + ':' + today.getMinutes()
+    let dateTime = date + ' at ' + time
+    this.setState({
+      time: dateTime
+    })
+    return 'finished'
   }
 
   openWidget = () => {
@@ -89,37 +103,10 @@ class NewCatForm extends React.Component {
                   value={this.state.name}
                 />
               </div>
-              <div className="input-box">
-                <p className="field-title">when </p>
-                <input
-                  name="time"
-                  className="form-control"
-                  onChange={this.handleChange}
-                  value={this.state.time}
-                />
-              </div>
               <div className="button-container">
                 <button type="button" onClick={this.locateMe}>
                   use my location!
                 </button>
-              </div>
-              <div className="input-box">
-                <p className="field-title">where - latitude </p>
-                <input
-                  name="latitude"
-                  className="form-control"
-                  onChange={this.handleChange}
-                  value={this.state.latitude}
-                />
-              </div>
-              <div className="input-box">
-                <p className="field-title">where - longitude </p>
-                <input
-                  name="longitude"
-                  className="form-control"
-                  onChange={this.handleChange}
-                  value={this.state.longitude}
-                />
               </div>
               <div className="button-container">
                 <button type="button" onClick={this.openWidget}>
