@@ -35,6 +35,7 @@ form div {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  background-image: url('https://res.cloudinary.com/stoopcats/image/upload/c_fit,h_600,w_600/v1595881995/blackandwhitebrooklynmap_wakfvu.jpg');
 }
 
 .newCatForm .container .img {
@@ -102,7 +103,7 @@ form div {
   color: #ffffff;
   font-size: 16px;
   padding: 15px;
-  background-color: #4b8eb2;
+  background-color: #80987f;
   border: none;
   border-radius: 10px;
   width: 100%;
@@ -117,12 +118,16 @@ form div {
 }
 
 .newCatForm .container .form-fields .submitButton-container {
-  width: 100%;
+  display: flex;
+  border: 1px solid transparent;
+  justify-content: center;
+  justify-items: center;
+  /* width: 100%;
   display: flex;
   border: 1px solid transparent;
   justify-content: center;
   margin-top: 18px;
-  margin-bottom: 23px;
+  margin-bottom: 23px; */
   /* margin-right: 13px;
   margin-left: 13px; */
   /* padding: 15px; */
@@ -135,8 +140,17 @@ form div {
   background-color: #e54567;
   border: none;
   border-radius: 10px;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  /* color: #ffffff;
+  font-size: 16px;
+  padding: 15px;
+  background-color: #e54567;
+  border: none;
+  border-radius: 10px;
   /* margin-right: 0px; */
-  width: 50%;
+  /* width: 50%; */
 }
 
 .newCatForm .container .form-fields .submitButton-container button:hover {
@@ -222,76 +236,4 @@ form div {
   margin: 8px 0;
   padding-left: 12px;
   font-size: 15px;
-}
-
-/* .login-form .container .form-fields .form-control ::placeholder {
-  color: #cccccc;
-} */
-
-.newCatForm .container .form-fields .button-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-items: center;
-  /* border: 1px solid transparent; */
-  /* margin-bottom: 20px; */
-}
-
-.newCatForm .container .form-fields .button-container button {
-  color: #ffffff;
-  font-size: 16px;
-  padding: 15px;
-  background-color: #80987f;
-  border: none;
-  border-radius: 10px;
-  width: 20vw;
-  margin-top: 25px;
-  margin-bottom: 8px;
-}
-
-.newCatForm .container .form-fields .button-container a {
-  justify-self: center;
-  color: #ffffff;
-  font-size: 16px;
-  padding: 15px;
-  background-color: #80987f;
-  border: none;
-  border-radius: 10px;
-  width: 20vw;
-  margin-top: 25px;
-  margin-bottom: 8px;
-}
-
-.newCatForm .container .form-fields .button-container button:hover {
-  background-color: #414855;
-}
-
-.newCatForm .container .form-fields .submitButton-container {
-  display: flex;
-  border: 1px solid transparent;
-  justify-content: center;
-  justify-items: center;
-}
-
-.newCatForm .container .form-fields .submitButton-container button {
-  color: #ffffff;
-  font-size: 16px;
-  padding: 15px;
-  background-color: #80987f;
-  border: none;
-  border-radius: 10px;
-  width: 20vw;
-}
-
-.newCatForm .container .form-fields .submitButton-container a {
-  display: flex;
-  justify-self: center;
-  padding: 15px;
-  justify-content: center;
-  text-decoration: none;
-  width: 20vw;
-}
-
-.newCatForm .container .form-fields .submitButton-container button:hover {
-  background-color: #414855;
 }
