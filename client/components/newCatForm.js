@@ -10,11 +10,13 @@ class NewCatForm extends React.Component {
       time: '',
       latitude: null,
       longitude: null,
-      imageUrl: ''
+      imageUrl: '',
+      hideUser: false
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.locateMe = this.locateMe.bind(this)
+    this.toggleUser = this.toggleUser.bind(this)
   }
 
   handleChange(event) {
@@ -24,7 +26,7 @@ class NewCatForm extends React.Component {
     })
   }
 
-  async handleSubmit(event) {
+  handleSubmit = async event => {
     event.preventDefault()
     console.log('before', this.state)
     await this.assignTime()
@@ -87,6 +89,10 @@ class NewCatForm extends React.Component {
       .open()
   }
 
+  toggleUser() {
+    this.setState(prevState => ({hideUser: !prevState.hideUser}))
+  }
+
   render() {
     return (
       <div className="newCatForm">
@@ -112,6 +118,22 @@ class NewCatForm extends React.Component {
                 <button type="button" onClick={this.openWidget}>
                   pic (or it didn't happen!){' '}
                 </button>
+              </div>
+              <div>
+                <p className="field-title">hide my username</p>
+                <input
+                  type="checkbox"
+                  className="toggle-switch"
+                  id="toggle-switch-new"
+                  checked={this.hideUser}
+                  onChange={this.toggleUser}
+                />
+                <label
+                  className="toggle-switch-label"
+                  htmlFor="toggle-switch-new"
+                >
+                  <span className="toggle-switch-button" />
+                </label>
               </div>
               <div className="submitButton-container">
                 <button type="submit">Spot!</button>

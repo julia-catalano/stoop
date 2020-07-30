@@ -19,7 +19,8 @@ router.post('/', async (req, res, next) => {
       latitude: req.body.latitude,
       longitude: req.body.longitude,
       imageUrl: req.body.imageUrl,
-      userId: req.session.passport.user
+      userId: req.session.passport.user,
+      hideUser: req.body.hideUser
     })
     res.json(cat)
   } catch (error) {
