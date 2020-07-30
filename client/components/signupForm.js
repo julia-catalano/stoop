@@ -10,28 +10,47 @@ const SignUp = props => {
   const {name, handleSubmit, error} = props
 
   return (
-    <div>
+    <div className="identity-form">
       <form onSubmit={handleSubmit} name={name}>
-        <div>
-          <label htmlFor="email">
-            <small>Email</small>
-          </label>
-          <input name="email" type="text" />
-        </div>
-        <div>
-          <label htmlFor="username">
-            <small>Username</small>
-          </label>
-          <input name="username" type="username" />
-        </div>
-        <div>
-          <label htmlFor="password">
-            <small>Password</small>
-          </label>
-          <input name="password" type="password" />
-        </div>
-        <div>
-          <button type="submit">Sign Up</button>
+        <div className="container">
+          <div className="form-fields">
+            <div className="input-box">
+              <label htmlFor="email">
+                <small>Email</small>
+              </label>
+              <input
+                name="email"
+                type="text"
+                className="form-control"
+                placeholder="e-mail"
+              />
+            </div>
+            <div className="input-box">
+              <label htmlFor="username">
+                <small>Username</small>
+              </label>
+              <input
+                name="username"
+                type="username"
+                className="form-control"
+                placeholder="username"
+              />
+            </div>
+            <div className="input-box">
+              <label htmlFor="password">
+                <small>Password</small>
+              </label>
+              <input
+                name="password"
+                type="password"
+                className="form-control"
+                placeholder="password"
+              />
+            </div>
+            <div className="submitButton-container">
+              <button type="submit">Sign Up</button>
+            </div>
+          </div>
         </div>
         {error && error.response && <div> {error.response.data} </div>}
       </form>
