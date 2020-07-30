@@ -39,6 +39,9 @@ class Markers extends PureComponent {
             {catState.selectedCat.name}
             <img src={catState.selectedCat.imageUrl} />
             {catState.selectedCat.time}
+            {catState.selectedCat.hideUser
+              ? null
+              : catState.selectedCat.user.username}
           </Popup>
         )}
       </div>
