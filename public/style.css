@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  background-color: green;
 }
 
 a {
@@ -345,27 +346,6 @@ form div {
   width: 60px;
 }
 
-/* .header {
-    display: block;
-    background-color: rgba(243,242,238,0);
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: 16;
-    background: rgba(98,105,80,0.8);
-    bottom: 0;
-    content: ' ';
-    display: block;
-    left: 0;
-    mix-blend-mode: multiply;
-    opacity: 0;
-    position: fixed;
-    right: 0;
-    top: 76px;
-    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-    z-index: -1;
-} */
-
 .navbar {
   font-family: 'GT America', 'Arial', sans-serif;
   font-size: 12px;
@@ -377,6 +357,7 @@ form div {
   position: relative;
   align-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0);
 }
 
 .total-nav-container {
@@ -388,6 +369,8 @@ form div {
 .cat-title {
   display: flex;
   height: 30px;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
 .nav-container {
