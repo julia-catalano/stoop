@@ -1,28 +1,44 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import {logout} from '../store'
+import cat from '../../client/images/pet.png'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
-  <div>
-    <h1>STOOP</h1>
-    <nav>
+  <div className="header">
+    <nav className="navbar">
       {isLoggedIn ? (
-        <div>
+        <div className="total-nav-container">
+          <div className="cat-title">
+            <img src={cat} height="30px" width="30px" />
+            <p className="title">stoop</p>
+          </div>
           {/* The navbar will show these links after you log in */}
-          <Link to="/catmap">cat map</Link>
-          <Link to="/add">add a spot</Link>
-          <Link to="/home">my spots</Link>
-          <a href="#" onClick={handleClick}>
-            logout
-          </a>
+          <div className="nav-container">
+            <NavLink
+              to="/catmap"
+              className="nav-item"
+              activeClassName="selected"
+            >
+              cat map
+            </NavLink>
+            <NavLink to="/add" className="nav-item" activeClassName="selected">
+              add a spot
+            </NavLink>
+            <NavLink to="/home" className="nav-item" activeClassName="selected">
+              my spots
+            </NavLink>
+            <a className="nav-item" href="#" onClick={handleClick}>
+              logout
+            </a>
+          </div>
         </div>
       ) : (
         <div>
           {/* The navbar will show these links before you log in */}
-          <Link to="/login">login</Link>
-          <Link to="/signup">sign up</Link>
+          <NavLink to="/login">login</NavLink>
+          <NavLink to="/signup">sign up</NavLink>
         </div>
       )}
     </nav>

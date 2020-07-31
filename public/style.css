@@ -344,3 +344,82 @@ form div {
 .toggle-switch-label:active .toggle-switch-button {
   width: 60px;
 }
+
+/* .header {
+    display: block;
+    background-color: rgba(243,242,238,0);
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 16;
+    background: rgba(98,105,80,0.8);
+    bottom: 0;
+    content: ' ';
+    display: block;
+    left: 0;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 76px;
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: -1;
+} */
+
+.navbar {
+  font-family: 'GT America', 'Arial', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  box-sizing: border-box;
+  line-height: 16px;
+  position: relative;
+  align-content: center;
+  align-items: center;
+}
+
+.total-nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.cat-title {
+  display: flex;
+  height: 30px;
+}
+
+.nav-container {
+  align-self: flex-end;
+  display: flex;
+  height: 30px;
+  justify-content: flex-end;
+  max-width: 1920px;
+}
+
+.nav-item {
+  font-family: 'GT America', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  line-height: 16px;
+  color: #626950;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.title {
+  align-self: center;
+  padding-left: 5px;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+  font-family: 'GT America', 'Arial', sans-serif;
+}
