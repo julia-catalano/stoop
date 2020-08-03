@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
-  background-color: green;
+  background-color: lightgray;
+  margin-top: 100px;
 }
 
 a {
@@ -392,7 +393,7 @@ form div {
 }
 
 .nav-item:hover {
-  text-decoration: underline;
+  font-weight: bold;
 }
 
 .selected {
