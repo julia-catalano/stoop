@@ -101,10 +101,10 @@ class NewCatForm extends React.Component {
             <h4> spotted! </h4>
             <div className="form-fields">
               <div className="input-box">
-                <p className="field-title">name your spot </p>
                 <input
                   name="name"
                   className="form-control"
+                  placeholder="name your spot"
                   onChange={this.handleChange}
                   value={this.state.name}
                 />
@@ -119,7 +119,7 @@ class NewCatForm extends React.Component {
                   pic (or it didn't happen!){' '}
                 </button>
               </div>
-              <div>
+              <div className="toggle-switch-container">
                 <p className="field-title">hide my username</p>
                 <input
                   type="checkbox"
