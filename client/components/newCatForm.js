@@ -98,13 +98,13 @@ class NewCatForm extends React.Component {
       <div className="newCatForm">
         <form onSubmit={this.handleSubmit}>
           <div className="container">
-            <h4> spotted! </h4>
+            <p className="form-title"> spotted! </p>
             <div className="form-fields">
               <div className="input-box">
                 <input
                   name="name"
                   className="form-control"
-                  placeholder="name your spot"
+                  placeholder="name your cat"
                   onChange={this.handleChange}
                   value={this.state.name}
                 />

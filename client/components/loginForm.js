@@ -13,6 +13,7 @@ const LoginForm = props => {
     <div className="identity-form">
       <form onSubmit={handleSubmit} name={name}>
         <div className="container">
+          <p className="form-title">log in</p>
           <div className="form-fields">
             <div className="input-box">
               <label htmlFor="email">

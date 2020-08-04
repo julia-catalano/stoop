@@ -90,7 +90,7 @@ form div {
 
 .newCatForm .container .form-fields .input-box {
   margin: 8px 0;
-  padding-left: 12px;
+  /* this is where we had 12px padding left */
   font-size: 15px;
 }
 
@@ -103,7 +103,7 @@ form div {
 
 .newCatForm .container .form-fields .button-container button {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   padding: 15px;
   background-color: #80987f;
   border: none;
@@ -144,7 +144,7 @@ form div {
 
 .newCatForm .container .form-fields .submitButton-container button {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   padding: 15px;
   background-color: #e54567;
   border: none;
@@ -164,7 +164,7 @@ form div {
 
 .identity-form .container .form-fields .submitButton-container button {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   padding: 15px;
   background-color: #e54567;
   border: none;
@@ -182,7 +182,13 @@ form div {
   background-color: #414855;
 }
 
-/* PROFILE */
+.form-title {
+  font-size: 25px;
+  font-weight: 100;
+  padding-top: 20px;
+  margin: 0px;
+}
+
 .newCatForm {
   /* background-size: cover; */
   display: flex;
@@ -299,13 +305,13 @@ form div {
 
 .newCatForm .container .form-fields .input-box {
   margin: 8px 0;
-  padding-left: 12px;
+
   font-size: 15px;
 }
 
 .identity-form .container .form-fields .input-box {
   margin: 8px 0;
-  padding-left: 12px;
+
   font-size: 15px;
 }
 .toggle-switch {
