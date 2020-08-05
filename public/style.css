@@ -1,7 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: lightgray;
-  margin-top: 100px;
+  background-color: white;
 }
 
 a {
@@ -204,6 +203,11 @@ form div {
   justify-content: center;
   overflow: scroll;
   align-items: center;
+  background-image: url('https://res.cloudinary.com/stoopcats/image/upload/b_rgb:bab8b8,o_70/v1596657666/20190724_082416_kar4qz.jpg');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .identity-form {
@@ -222,7 +226,7 @@ form div {
   flex-direction: column;
   align-items: center;
   width: 40vw;
-  background-color: #e2dde1;
+  background-color: #ffffff;
   border-radius: 20px;
 }
 
@@ -452,8 +456,8 @@ form div {
 }
 
 .header {
-  position: fixed;
-  top: 0;
+  /* position: fixed;
+  top: 0; */
   width: 100%;
   z-index: 1;
 }
