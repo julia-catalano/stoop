@@ -431,11 +431,11 @@ form div {
 
 .nav-item {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: normal;
   letter-spacing: 0.5px;
   line-height: 16px;
-  color: #626950;
+  color: #80987f;
   text-decoration: none;
 }
 
@@ -450,7 +450,8 @@ form div {
 .title {
   align-self: center;
   padding-left: 5px;
-  font-size: 30px;
+  font-size: 25px;
+  font-weight: 100;
   letter-spacing: 0.5px;
   font-family: 'Roboto', sans-serif;
 }

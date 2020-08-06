@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {NavLink} from 'react-router-dom'
 import {logout} from '../store'
-import cat from '../../client/images/pet.png'
+import stairs from '../../client/images/handrail.png'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div className="header">
@@ -11,8 +11,8 @@ const Navbar = ({handleClick, isLoggedIn}) => (
       {isLoggedIn ? (
         <div className="total-nav-container">
           <div className="cat-title">
-            <img src={cat} height="30px" width="30px" />
-            <p className="title">stoop</p>
+            <img src={stairs} height="30px" width="30px" />
+            <p className="title">STOOP</p>
           </div>
           {/* The navbar will show these links after you log in */}
           <div className="nav-container">
