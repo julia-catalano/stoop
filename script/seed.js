@@ -18,30 +18,38 @@ async function seed() {
     Cat.create({
       name: 'Indy',
       time: '1:09PM',
+      userId: 1,
       latitude: 40.6600605,
       longitude: -73.9609829,
-      imageUrl: 'http://aws.random.cat/meow'
+      imageUrl:
+        'https://res.cloudinary.com/stoopcats/image/upload/v1596645068/IMG_5024_o0odqy.jpg'
     }),
     Cat.create({
       name: 'BK Zinc Cat',
       time: '2:09PM',
+      userId: 1,
       latitude: 40.6780161,
       longitude: -73.9670804,
-      imageUrl: 'http://aws.random.cat/meow'
+      imageUrl:
+        'https://res.cloudinary.com/stoopcats/image/upload/v1596135176/indycopy_v3x1pn.jpg'
     }),
     Cat.create({
       name: 'bodegacat',
       time: '3:09PM',
+      userId: 1,
       latitude: 40.6600615,
       longitude: -73.9554536,
-      imageUrl: 'http://aws.random.cat/meow'
+      imageUrl:
+        'https://res.cloudinary.com/stoopcats/image/upload/t_stoopcat/v1597601488/91951680_153774592632323_7043706309263746058_n.jpg_d6uc8r.jpg'
     }),
     Cat.create({
       name: 'meowby',
       time: '4:09PM',
+      userId: 1,
       latitude: 40.6600605,
       longitude: -73.9620895,
-      imageUrl: 'http://aws.random.cat/meow'
+      imageUrl:
+        'https://res.cloudinary.com/stoopcats/image/upload/t_stoopcat/v1597601490/29089045_831749447030164_5191977808544399360_n.jpg_rnwwts.jpg'
     })
   ])
 }
